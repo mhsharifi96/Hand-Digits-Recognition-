@@ -16,9 +16,9 @@ In this code use two dataset:
 
 **1.** Install Requirements
 
-**2.**if you recognize english digits run ```python mnist_main.py```
+**2.** If you recognize english digits run ```python mnist_main.py```
 
-**3.**if you recognize persian digits run ```python hoda_main.py```
+**3.** If you recognize persian digits run ```python hoda_main.py```
 
 
 # Result
@@ -48,3 +48,6 @@ Epoch 5 : 9391 / 10000 accuracy:93.91
 ...
 
 ```
+
+# reference
+[Using neural nets to recognize handwritten digits](http://neuralnetworksanddeeplearning.com/chap1.html)
