@@ -15,7 +15,9 @@ In this code use two dataset:
 
 
 **1.** Install Requirements
+
 **2.**if you recognize english digits run ```python mnist_main.py```
+
 **3.**if you recognize persian digits run ```python hoda_main.py```
 
 
