@@ -19,9 +19,9 @@ In this code use two dataset:
 **3.**if you recognize persian digits run ```python hoda_main.py```
 
 
-#Result
+# Result
 
-##persian digits
+## persian digits
 ```
 $ python3 hoda_main.py 
 
@@ -33,7 +33,7 @@ Epoch 2 : 18584 / 20000 accuracy:92.92
 ...
 
 ```
-##english digits
+## english digits
 ```
 $ python mnist_main.py
 
