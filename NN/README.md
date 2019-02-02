@@ -7,31 +7,18 @@
 * Numpy 
 * cv2
 * matplotlib
-* tensorflow
 
 # Usage
 In this code use two dataset:
 **1.** MNIST for recognize english digits
-
 **2.** HODA for recognize persian digits
 
 
 **1.** Install Requirements
 
-### In NN dir
-A module to implement the stochastic gradient descent learning
-algorithm for a feedforward neural network.  Gradients are calculated
-using backpropagation.  Note that I have focused on making the code
-simple, easily readable, and easily modifiable.  It is not optimized,
-and omits many desirable features.
-
 **2.** If you recognize english digits run ```python mnist_main.py```
 
 **3.** If you recognize persian digits run ```python hoda_main.py```
-
-### In tensorflow dir
-Handwritten Digits with TensorFlow
-**1.** If you recognize english digits run ```python ts_main.py```
 
 
 # Result
@@ -66,5 +53,3 @@ Epoch 5 : 9391 / 10000 accuracy:93.91
 [Using neural nets to recognize handwritten digits](http://neuralnetworksanddeeplearning.com/chap1.html)
 [Hoda]
 (http://farsiocr.ir/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%D8%AF%D8%A7%D8%AF%D9%87/%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87-%D8%A7%D8%B1%D9%82%D8%A7%D9%85-%D8%AF%D8%B3%D8%AA%D9%86%D9%88%DB%8C%D8%B3-%D9%87%D8%AF%DB%8C/)
-[tensorflow](https://www.tensorflow.org/)
-[Handwritten Digits with TensorFlow](https://www.digitalocean.com/community/tutorials/how-to-build-a-neural-network-to-recognize-handwritten-digits-with-tensorflow)

@@ -46,7 +46,7 @@ class Network(object):
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
-            test_data=None):
+            test_data=None,valid_data=None):
         """Train the neural network using mini-batch stochastic
         gradient descent.  The ``training_data`` is a list of tuples
         ``(x, y)`` representing the training inputs and the desired
@@ -62,6 +62,10 @@ class Network(object):
         if test_data:
             test_data = list(test_data)
             n_test = len(test_data)
+        
+        if valid_data:
+            valid_data=list(valid_data)
+            n_valid=len(valid_data)
             
         for j in range(epochs):
             random.shuffle(training_data)
@@ -77,6 +81,11 @@ class Network(object):
                 evaluate_data = self.evaluate(test_data)
                 accuracy=(evaluate_data/n_test)*100
                 print("Epoch {} : {} / {} accuracy:{} ".format(j,evaluate_data,n_test,accuracy));
+            if valid_data:
+                evaluate_data = self.evaluate(valid_data)
+                accuracy=(evaluate_data/n_valid)*100
+                print("Epoch {} : {} / {} accuracy:{} ".format(j,evaluate_data,n_valid,accuracy));
+
             else:
                 print("Epoch {} complete".format(j))
 
@@ -136,15 +145,15 @@ class Network(object):
             nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())
         return (nabla_b, nabla_w)
 
-    def evaluate(self, test_data):
+    def evaluate(self, _data):
         """Return the number of test inputs for which the neural
         network outputs the correct result. Note that the neural
         network's output is assumed to be the index of whichever
         neuron in the final layer has the highest activation."""
 
-        test_results = [(np.argmax(self.feedforward(x)), y)
-                        for (x, y) in test_data]
-        return sum(int(x == y) for (x, y) in test_results)
+        _results = [(np.argmax(self.feedforward(x)), y)
+                        for (x, y) in _data]
+        return sum(int(x == y) for (x, y) in _results)
 
     def cost_derivative(self, output_activations, y):
         """Return the vector of partial derivatives \partial C_x /
