@@ -11,12 +11,12 @@
 
 # Usage
 In this code use two dataset:
+
 **1.** MNIST for recognize english digits
 
 **2.** HODA for recognize persian digits
 
-
-**1.** Install Requirements
+**3.** Install Requirements
 
 ### In NN dir
 A module to implement the stochastic gradient descent learning
@@ -25,9 +25,9 @@ using backpropagation.  Note that I have focused on making the code
 simple, easily readable, and easily modifiable.  It is not optimized,
 and omits many desirable features.
 
-**2.** If you recognize english digits run ```python mnist_main.py```
+**1.** If you recognize english digits run ```python mnist_main.py```
 
-**3.** If you recognize persian digits run ```python hoda_main.py```
+**2.** If you recognize persian digits run ```python hoda_main.py```
 
 ### In tensorflow dir
 Handwritten Digits with TensorFlow
